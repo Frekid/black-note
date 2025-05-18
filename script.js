@@ -68,12 +68,12 @@ function walidacja() { //funkcja sprawdzająca poprawność formularza
     }
 }
 
-// zarządza polami ilości dlia checkboxów bukietów
-document.querySelectorAll('input[name="bukiet"]').forEach(checkbox => { // znajduje wszystkie checkboxy do wyboru bukietów
-    checkbox.addEventListener('change', function() { //dodaje obsluge zdarzenia jeszli ktoś kliknie checkbox
-        let iloscId = 'ilosc-' + this.id;
+//aktywuje pola ilości tylko jezeli bukiet został zaznaczony
+document.querySelectorAll('input[name="bukiet"]').forEach(checkbox => { 
+    checkbox.addEventListener('change', function() { 
+        let iloscId = 'ilosc-' + this.id; // tworzymy ID pola ilości
         let iloscInput = document.getElementById(iloscId);
-        iloscInput.disabled = !this.checked; // aktywuje pole jeśli zaznaczono
-        if (!this.checked) iloscInput.value = '1'; // reset przy odznaczeniu
+        iloscInput.disabled = !this.checked; //aktywacja pola
+        if (!this.checked) iloscInput.value = '1'; //reset wartosz do 1
     });
 });
