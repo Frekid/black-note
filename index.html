@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kwiaciarnia Kwiatowy Zakątek</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Kwiatki u Maksa</h1>
+        
+        <form id="zamowienie">
+            <h2>Zamów bukieczik</h2>
+            
+            <div class="form-group">
+                <h3>Wybierz bukiety:</h3>
+                
+                <div class="bukiet">
+                    <input type="checkbox" id="roza" name="bukiet" value="Różowy różany">
+                    <label for="roza">Czerwony Trojandy (30.99zł)</label>
+                    <input type="number" id="ilosc-roza" min="1" value="1" disabled>
+                </div>
+                
+                <div class="bukiet">
+                    <input type="checkbox" id="lilak" name="bukiet" value="Biały lilak">
+                    <label for="lilak">Biały kwiatki (49.99zł)</label>
+                    <input type="number" id="ilosc-lilak" min="1" value="1" disabled>
+                </div>
+                
+                <div class="bukiet">
+                    <input type="checkbox" id="chryzantema" name="bukiet" value="Bordowe chryzantemy">
+                    <label for="chryzantema">tulipany (59.99zł)</label>
+                    <input type="number" id="ilosc-chryzantema" min="1" value="1" disabled>
+                </div>
+                <p id="error-bukiet" class="error"></p>
+            </div>
+            
+            <div class="form-group">
+                <h3>Twoje dane:</h3>
+                
+                <label for="imie">Imię:</label>
+                <input type="text" id="imie">
+                <p id="error-imie" class="error"></p>
+                
+                <label for="nazwisko">Nazwisko:</label>
+                <input type="text" id="nazwisko">
+                <p id="error-nazwisko" class="error"></p>
+                
+                <label for="telefon">Telefon:</label>
+                <input type="tel" id="telefon">
+                <p id="error-telefon" class="error"></p>
+                
+                <label for="email">Email:</label>
+                <input type="email" id="email">
+                <p id="error-email" class="error"></p>
+            </div>
+            
+            <button type="button" onclick="walidacja()">Zamów szybko</button>
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
