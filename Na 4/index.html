@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kwiatki u Maksa</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Kwiatki u Maksa</h1>
+
+        <form id="zamowienie">
+            <h2>Zamów bukieczik</h2>
+
+            <div class="form-group">
+                <h3>Wybierz bukiety:</h3>
+                <div class="bukiet">
+                    <input type="checkbox" id="roza" name="bukiet" value="30.99">
+                    <label for="roza">Czerwony Trojandy (30.99zł)</label>
+                    <input type="number" id="ilosc-roza" min="1" value="1" disabled>
+                </div>
+                <div class="bukiet">
+                    <input type="checkbox" id="lilak" name="bukiet" value="49.99">
+                    <label for="lilak">Biały kwiatki (49.99zł)</label>
+                    <input type="number" id="ilosc-lilak" min="1" value="1" disabled>
+                </div>
+                <div class="bukiet">
+                    <input type="checkbox" id="chryzantema" name="bukiet" value="59.99">
+                    <label for="chryzantema">Tulipany (59.99zł)</label>
+                    <input type="number" id="ilosc-chryzantema" min="1" value="1" disabled>
+                </div>
+                <p id="error-bukiet" class="error"></p>
+            </div>
+
+            <div class="form-group">
+                <h3>Dodatkowe usługi:</h3>
+                <div class="bukiet">
+                    <input type="checkbox" id="dostawa" value="15">
+                    <label for="dostawa">Dostawa (15zł)</label>
+                </div>
+                <div class="bukiet">
+                    <input type="checkbox" id="dekoracja" value="20">
+                    <label for="dekoracja">Dekoracja (20zł)</label>
+                </div>
+                <div class="bukiet">
+                    <input type="checkbox" id="karteczka" value="5">
+                    <label for="karteczka">Karteczka z życzeniami (5zł)</label>
+                </div>
+                <label for="uwagi">Uwagi specjalne:</label>
+                <textarea id="uwagi" rows="3" style="width: 100%;"></textarea>
+            </div>
+
+            <div class="form-group">
+                <h3>Twoje dane:</h3>
+                <label for="imie">Imię:</label>
+                <input type="text" id="imie">
+                <p id="error-imie" class="error"></p>
+
+                <label for="nazwisko">Nazwisko:</label>
+                <input type="text" id="nazwisko">
+                <p id="error-nazwisko" class="error"></p>
+
+                <label for="telefon">Telefon:</label>
+                <input type="tel" id="telefon">
+                <p id="error-telefon" class="error"></p>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email">
+                <p id="error-email" class="error"></p>
+            </div>
+
+            <div class="form-group">
+                <h3>Łączna kwota:</h3>
+                <p id="suma" class="suma">0zł</p>
+            </div>
+
+            <button type="button" onclick="obliczSume()">Oblicz kwotę</button>
+            <button type="button" onclick="walidacja()">Zamów szybko</button>
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
