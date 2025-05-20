@@ -15,18 +15,17 @@ body {
 }
 
 h1 {
-    color: #035fff;
+    color: #Fa9489;
     text-align: center;
 }
 
 h2 {
-    color: #5900ff;
-    border-bottom: 2px solid #9900ff;
+    color: #ff6200;
     padding-bottom: 5px;
 }
 
 h3 {
-    color: #00b7ff;
+    color: hsl(248, 100%, 50%);
 }
 
 .form-group {
@@ -63,7 +62,7 @@ textarea {
 }
 
 button {
-    background: #ff0077;
+    background: #A59992;
     color: white;
     border: none;
     padding: 12px;

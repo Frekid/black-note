@@ -1,16 +1,15 @@
 function walidacja() { //funkcja sprawdzająca poprawność formularza
     // pobierania elementów po ID
-    let roza = document.getElementById('roza');
-    let lilak = document.getElementById('lilak');
-    let chryzantema = document.getElementById('chryzantema');
-    let iloscRoza = document.getElementById('ilosc-roza');
-    let iloscLilak = document.getElementById('ilosc-lilak');
-    let iloscChryzantema = document.getElementById('ilosc-chryzantema');
-
-    let imie = document.getElementById('imie');
-    let nazwisko = document.getElementById('nazwisko');
-    let telefon = document.getElementById('telefon');
-    let email = document.getElementById('email');
+    const roza = document.getElementById('roza');
+    const lilak = document.getElementById('lilak');
+    const chryzantema = document.getElementById('chryzantema');
+    const iloscRoza = document.getElementById('ilosc-roza');
+    const iloscLilak = document.getElementById('ilosc-lilak');
+    const iloscChryzantema = document.getElementById('ilosc-chryzantema');
+    const imie = document.getElementById('imie');
+    const nazwisko = document.getElementById('nazwisko');
+    const telefon = document.getElementById('telefon');
+    const email = document.getElementById('email');
     // resetowania błedów
     document.querySelectorAll('.error').forEach(el => el.textContent = '');
     let isValid = true;
