@@ -1,5 +1,5 @@
 function walidacja() { //funkcja sprawdzająca poprawność formularza
-    // pobierania elementów po ID
+    // pobierania elementów po ID 1
     let roza = document.getElementById('roza');
     let lilak = document.getElementById('lilak');
     let chryzantema = document.getElementById('chryzantema');
